@@ -1,0 +1,8 @@
+// http://haml.info
+%h3 All Skeletons
+%ul
+    - @skeletons.each do |skeleton|
+        %li
+            %a(href="/skeletons/#{skeleton.id}/edit")
+                = skeleton.name
+%a(href="/") Back to Home

@@ -1,0 +1,15 @@
+# this code works on heroku as is
+#
+# please set your database name (and settings)
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: sinatras-skeleton
+  pool: 5
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: sinatras-skeleton
+  pool: 5

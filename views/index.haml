@@ -1,0 +1,57 @@
+// http://haml.info
+%h1 Sinatra's Skeleton App
+%p
+    This is a modular, multifile Sinatra app with CoffeeScript, SASS and Haml pre-installed
+%p
+    Styled with
+    %a{href: "http://purecss.io", target: "_blank"} PureCSS,
+    read about the
+    %a{href: "https://purecss.io/layouts/tucked-menu/#", target: "_blank"} responsive menu
+    used.
+
+%hr
+
+%h4
+    This app is a sample sinatra app to get you started.
+%p
+    Ships with a CRUD example, basic User Authentication System (with Warden) and plenty of commented code that lets you dive right in Sinatra.rb
+    %em In this example, controllers act as Service Objects, but you can easily change them to work like you are used in Rails.
+
+%hr
+
+%h2 Use this project
+%h3 What you need to get started
+%ul
+    %li
+        Ruby 2.3.x
+    %li
+        Bundler
+        %em (gem install bundler)
+
+%h3 How to start
+%ol
+    %li
+        clone the project from github
+    %li
+        navigate to the directory and run:
+        %strong $ bundle install
+    %li
+        edit
+        %strong config/database.yml
+    %li
+        then start your local PostgresQL and populate it:
+        %strong $ rake db:setup
+    %li
+        start your local dev environment:
+        %strong $ thin start
+    %li
+        edit titles and descriptions in
+        %strong views/layout.haml
+        and
+        %strong views/nav.haml
+
+%h4 Ready to deploy... this project runs on heroku as is ;-)
+
+%hr
+%p Before you dig in, look at this picture of a pug. Relax, you are safe...
+%img(src="sample-image.jpg" class="full-width")
