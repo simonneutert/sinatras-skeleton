@@ -64,8 +64,10 @@ Most code is commented, so you'll learn what it does.
 * Be nice, make public forks
 * What did you use this app for? Please, let me know! Share your projects.
 
-## <a name="credits"></a>Credits
-_all the blood, sweat and tears of others_
+## <a name="credits"></a>Credits / Blood, Sweat & Tears
+:heart: :sweat: :sob:
+
+thank you for open sourcing, writing documentation, blogging, answering and giving a hand on stackoverflow :thumbsup:
 
 **Warden**
 
@@ -81,13 +83,13 @@ _all the blood, sweat and tears of others_
 
 **ActiveRecord + PostgresQL**
 
-[mherman](http://mherman.org/blog/2013/06/08/designing-with-class-sinatra-plus-postgresql-plus-heroku/#.WKrnsxiX_-k) what is the base for AR and PG
+[mherman](http://mherman.org/blog/2013/06/08/designing-with-class-sinatra-plus-postgresql-plus-heroku/#.WKrnsxiX_-k)
 
 [samuelstern](https://samuelstern.wordpress.com/2012/11/28/making-a-simple-database-driven-website-with-sinatra-and-heroku/)
 
 **BCrypt**
 
-[Kieran's Answer on StackOverflow](http://stackoverflow.com/questions/39525723/bcrypterrorsinvalidhash-error-in-rails/39526561#39526561) got me thinking
+[Kieran's Answer on StackOverflow](http://stackoverflow.com/questions/39525723/bcrypterrorsinvalidhash-error-in-rails/39526561#39526561)
 
 [BCrypt Gem](https://github.com/codahale/bcrypt-ruby#how-to-use-bcrypt-ruby-in-general)
 
