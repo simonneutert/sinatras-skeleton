@@ -3,8 +3,8 @@ source "https://rubygems.org"
 ruby '2.3.3'
 
 gem 'sprockets'
-gem 'sinatra', '~> 2.0.0.beta2'
-gem 'sinatra-contrib', '~> 2.0.0.beta2'
+gem 'sinatra', '~> 2.0.0.rc1'
+gem 'sinatra-contrib', '~> 2.0.0.rc1'
 gem 'sinatra-flash'
 gem 'thin'
 gem 'haml'
