@@ -10,9 +10,10 @@ require 'execjs'
 require 'sinatra/activerecord'
 require 'warden'
 require 'bcrypt'
-require 'pry' # remove in production
-require 'closure-compiler'
 
+unless ENV['RACK_ENV'] == "production"
+  require 'pry'
+end
 
 # modular Sinatra app inherit from Sinatra::Base
 class MyApp < Sinatra::Base
