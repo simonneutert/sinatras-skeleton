@@ -10,20 +10,22 @@ require 'execjs'
 require 'sinatra/activerecord'
 require 'warden'
 require 'bcrypt'
-require 'pry'
+require 'pry' # remove in production
+require 'closure-compiler'
+
 
 # modular Sinatra app inherit from Sinatra::Base
 class MyApp < Sinatra::Base
-    # session support for your app
-    enable :sessions
-    # flash messages are not integrated, yet
-    # but loaded just in case someone finds the time
-    register Sinatra::Flash
-    set :root, File.dirname(__FILE__)
-    # files in static are served on "root"
-    set :public_folder, File.dirname(__FILE__) + '/static'
-    # set "/views/layout.haml" as the standard/global template wrapper (yield)
-    set :haml, format: :html5, layout: :layout
+  # session support for your app
+  enable :sessions
+  # flash messages are not integrated, yet
+  # but loaded just in case someone finds the time
+  register Sinatra::Flash
+  set :root, File.dirname(__FILE__)
+  # files in static are served on "root"
+  set :public_folder, File.dirname(__FILE__) + '/static'
+  # set "/views/layout.haml" as the standard/global template wrapper (yield)
+  set :haml, format: :html5, layout: :layout
 end
 
 # require libs

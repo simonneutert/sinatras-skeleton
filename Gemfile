@@ -11,8 +11,6 @@ gem 'haml'
 gem 'sass'
 gem 'turbolinks'
 gem 'yui-compressor'
-gem 'closure-compiler'
-gem 'jsmin'
 gem 'uglifier'
 gem 'coffee-script'
 gem "activerecord"
@@ -21,4 +19,7 @@ gem "rake"
 gem "pg"
 gem 'bcrypt'
 gem 'warden'
-gem 'pry'
+
+group :test, :development do
+  gem 'pry'
+end

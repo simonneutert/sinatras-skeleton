@@ -15,7 +15,6 @@ GEM
     arel (7.1.4)
     backports (3.6.8)
     bcrypt (3.1.11)
-    closure-compiler (1.1.12)
     coderay (1.1.1)
     coffee-script (2.4.1)
       coffee-script-source
@@ -28,7 +27,6 @@ GEM
     haml (4.0.7)
       tilt
     i18n (0.8.1)
-    jsmin (1.0.1)
     method_source (0.8.2)
     minitest (5.10.1)
     multi_json (1.12.1)
@@ -87,10 +85,8 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   bcrypt
-  closure-compiler
   coffee-script
   haml
-  jsmin
   pg
   pry
   rake
