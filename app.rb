@@ -18,7 +18,7 @@ end
 # modular Sinatra app inherit from Sinatra::Base
 class MyApp < Sinatra::Base
   # session support for your app
-  enable :sessions
+  use Rack::Session::Pool
   # flash messages are not integrated, yet
   # but loaded just in case someone finds the time
   register Sinatra::Flash
