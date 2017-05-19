@@ -11,7 +11,7 @@ require 'sinatra/activerecord'
 require 'warden'
 require 'bcrypt'
 
-unless ENV['RACK_ENV'] == "production"
+unless ENV['APP_ENV'] == "production"
   require 'pry'
 end
 
