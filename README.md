@@ -32,7 +32,7 @@ I want this Sinatra boilerplate app to:
 * roll an Authentication System
 * use PostgresQL as Database
 * run locally
-* run on heroku (in the dashboard add `APP_ENV=production` to the Config Vars)
+* run on heroku (don't forget: `$ heroku config:add APP_ENV=production`)
 
 
 ## <a name="start"></a>Get started
