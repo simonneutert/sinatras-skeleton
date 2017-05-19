@@ -1,9 +1,8 @@
 # routes
-# you can have as many files as you like
-#
-# be sure to not to have duplicate routes!
-#
+# * you can have as many files as you like
+# * make sure to not to have duplicate routes!
 # These routes belong to "MyApp" and must inherit from "Sinatra::Base" in order to work.
+
 class MyApp < Sinatra::Base
     get '/' do
         # use class/controller
