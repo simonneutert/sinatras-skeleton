@@ -2,6 +2,8 @@
 # * you can have as many files as you like
 # * make sure to not to have duplicate routes!
 # These routes belong to "MyApp" and must inherit from "Sinatra::Base" in order to work.
+# Check out Sinatra's buddy Musterman:
+# https://github.com/sinatra/mustermann/blob/master/mustermann/README.md#-parameter-parsing
 
 class MyApp < Sinatra::Base
     get '/' do
