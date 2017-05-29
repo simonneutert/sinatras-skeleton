@@ -2,18 +2,18 @@
 // analog to rails, yield renders the templates into the global layout
 !!! 5
 %html(lang="de")
-    %head
-        %title Sinatra's Skeleton
-        %meta(name="viewport" content="width=device-width, initial-scale=1")
-        // Sprockets: stylesheets compiled into app.css
-        %link{rel: 'stylesheet', href: '/assets/app.css'}
-        // purescss.io
-        %link{rel: "stylesheet", href: "https://unpkg.com/purecss@0.6.2/build/pure-min.css", integrity: "sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD", crossorigin: "anonymous"}
-        %link{rel: "stylesheet", href:"https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css"}
-        // Sprockets: javascripts compiled into app.js
-        %script{src: "/assets/app.js"}
+  %head
+    %title Sinatra's Skeleton
+    %meta(name="viewport" content="width=device-width, initial-scale=1")
+    // Sprockets: stylesheets compiled into app.css
+    %link{rel: 'stylesheet', href: '/assets/app.css'}
+    // purescss.io
+    %link{rel: "stylesheet", href: "https://unpkg.com/purecss@0.6.2/build/pure-min.css", integrity: "sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD", crossorigin: "anonymous"}
+    %link{rel: "stylesheet", href:"https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css"}
+    // Sprockets: javascripts compiled into app.js
+    %script{src: "/assets/app.js"}
 
-    %body{class: @controller_name}
-        = haml :nav, layout: false
-        #main
-            .content= yield
+  %body{class: @controller_name}
+    = haml :nav, layout: false
+    #main
+      .content= yield
