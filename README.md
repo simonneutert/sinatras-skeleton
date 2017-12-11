@@ -28,15 +28,14 @@ I want this Sinatra boilerplate app to:
 * use ORM is ActiveRecord
 * have an MVC-like structure
 * support Sass/Scss and CoffeeScript
-* brings [jQuery](http://jquery.com) and [Turbolinks](https://github.com/turbolinks/turbolinks)! Yes, Turbolinks.
+* party with [jQuery](http://jquery.com) and [Turbolinks](https://github.com/turbolinks/turbolinks)! Yes, Turbolinks.
 * roll an Authentication System
 * use PostgresQL as Database
-* run locally
 * run on heroku (don't forget: `$ heroku config:add APP_ENV=production`)
 
 
 ## <a name="start"></a>Get started
-You need **Ruby (2.3.3)**, **Bundler**  installed.
+You need **Ruby (2.4.2)** and **Bundler**.
 
 _If you do not have a local PostgresQL DB running, heroku can handle the code as is - do not forget to add **Heroku PostgresQL** addon in your dashboard._
 
@@ -51,7 +50,6 @@ _If you do not have a local PostgresQL DB running, heroku can handle the code as
 
 
 ### now what?
-* read this readme
 * read the credits
 * read the code
 * run the code, see what it does
