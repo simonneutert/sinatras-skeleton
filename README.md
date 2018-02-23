@@ -1,3 +1,11 @@
+# Warning! Sinatra 2.0.0 Security Issue!
+
+## Please update Sinatra in your Gemfile to:
+
+```
+gem 'sinatra', '~> 2.0.1'
+```
+
 # Basic Sinatra App with Sprockets, Warden, ActiveRecord and PostgresQL
 
 **This repository aims to be a boilerplate for a modular 2017 Sinatra (v2) app.**
