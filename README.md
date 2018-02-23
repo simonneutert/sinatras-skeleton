@@ -43,7 +43,7 @@ _If you do not have a local PostgresQL DB running, heroku can handle the code as
 * `$ bundle install`
 * edit __config/database.yml__
 * `$ rake db:setup`
-* `$ thin start` or `shotgun` ([shoutgun](https://github.com/rtomayko/shotgun) gem - _not included by default!_)
+* `$ thin start` or `rerun rackup` ([rerun](https://github.com/alexch/rerun) gem - _not included by default!_)
 * edit titles in __views/layout.haml__ and __views/nav.haml__
 * check/set timezone __config/timezone.rb__
 
