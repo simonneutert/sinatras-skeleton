@@ -22,7 +22,7 @@ __This repo has been updated to sinatra 2.0.1!__
 ## <a name="why"></a>Why?
 Why not Rails?
 
-Sinatra is a ruby/rack framework, that can be used as an alternative where Rails would simply be an overkill (though Rail5 really lost weight).
+Sinatra is a ruby/rack framework, that can be used as an alternative where Rails would simply be an overkill.
 
 I started working my way through the sinatra docs, aiming for a setup that can easily be modeled to a basic use case.
 
