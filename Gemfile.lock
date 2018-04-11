@@ -100,7 +100,7 @@ DEPENDENCIES
   pry
   rake
   sass
-  sinatra (~> 2.0.1)
+  sinatra (~> 2.0)
   sinatra-activerecord
   sinatra-contrib (~> 2.0)
   sinatra-flash
