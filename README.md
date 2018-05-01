@@ -19,8 +19,7 @@ __This repo has been updated to sinatra 2.0.1!__
 
 *Feel free to contribute, add more features, strip features or simply improve existing code* - __pull requests welcome__ :smile:
 
-## <a name="why"></a>Why?
-Why not Rails?
+## <a name="why"></a>Why not Rails?
 
 Sinatra is a ruby/rack framework, that can be used as an alternative where Rails would simply be an overkill.
 
