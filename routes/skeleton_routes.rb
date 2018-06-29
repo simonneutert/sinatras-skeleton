@@ -18,9 +18,12 @@ class MyApp < Sinatra::Base
         env['warden'].authenticate!
         # post route that handles the given form data and saves it to the database
         @skeleton = Skeleton.new(params[:skeleton])
+        @skeleton.valid?
         if @skeleton.save
+            flash[:success] = "Skeleton successfully saved!"
             redirect '/skeletons'
         else
+            @errors = @skeleton.errors
             haml :"skeletons/new_skeleton_form"
         end
     end
@@ -39,6 +42,7 @@ class MyApp < Sinatra::Base
         if @skeleton.update_attributes(params[:skeleton])
             redirect to('/skeletons')
         else
+            @errors = @skeleton.errors
             haml :"skeletons/edit_skeleton_form"
         end
     end
@@ -48,6 +52,7 @@ class MyApp < Sinatra::Base
         env['warden'].authenticate!
         @skeleton = Skeleton.find(params[:id])
         @skeleton.destroy
+        flash[:success] = "Skeleton successfully destroyed"
         redirect to('/skeletons')
     end
 end
