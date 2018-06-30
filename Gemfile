@@ -14,7 +14,7 @@ gem 'coffee-script'
 gem "activerecord"
 gem "sinatra-activerecord"
 gem "rake"
-gem "pg", "~>0.2"
+gem 'pg', '~> 1.0'
 gem 'bcrypt'
 gem 'warden'
 
