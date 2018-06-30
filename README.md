@@ -1,6 +1,6 @@
 # Basic Sinatra App with Sprockets, Warden, ActiveRecord and PostgresQL
 
-**This repository aims to be a boilerplate for a modular 2017 Sinatra (v2) app.**
+**This repository aims to be a boilerplate for a modular and modern (v2) Sinatra app.**
 
 [demo on heroku](https://sinatras-skeleton.herokuapp.com) (admin area is locked up :wink:)
 
@@ -66,6 +66,10 @@ Most code is commented, so you'll learn what it does.
 
 ## <a name="credits"></a>Credits / Blood, Sweat & Tears
 :heart: :sweat: :sob:
+
+**Contributors to this project**
+
+https://github.com/simonneutert/sinatras-skeleton/graphs/contributors
 
 thank you for open sourcing, writing documentation, blogging, answering and giving a hand on stackoverflow :thumbsup:
 
