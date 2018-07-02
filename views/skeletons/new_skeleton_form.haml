@@ -2,12 +2,12 @@
 // simple form that posts to "/submit"
 %h3 New Skeleton
 - if @errors
-	%div{:class => "validation-errors"}
-		- @errors.each do |attr, msg|
-			%p
-				= attr
-				= msg
+    %div{:class => "validation-errors"}
+        - @errors.each do |attr, msg|
+            %p
+                = attr
+                = msg
 
 %form(action="/submit" method="POST")
-	%input(type="text" name="skeleton[name]" value="Enter Skeleton Name" id="skeleton_name")
-	%input(input type="submit" value="Submit")
+    %input(type="text" name="skeleton[name]" value="Enter Skeleton Name" id="skeleton_name")
+    %input(input type="submit" value="Submit")

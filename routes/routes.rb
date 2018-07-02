@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # routes
 # * you can have as many files as you like
 # * make sure to not to have duplicate routes!
@@ -14,13 +16,13 @@ class MyApp < Sinatra::Base
   end
 
   get '/cave/:name' do
-    #set the controller_name to make use of it in your layout
+    # set the controller_name to make use of it in your layout
     @controller_name = 'hello'
     # matches "GET /hello/foo" and "GET /hello/bar"
     # params['name'] is 'foo' or 'bar'
     # @n stores params['name']
     @n = params['name']
-    if @n == "Sinatra"
+    if @n == 'Sinatra'
       haml :cave
     else
       haml "You yell: \"#{@n}\" into the dark cave. No echo."
