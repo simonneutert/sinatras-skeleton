@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # require gems and libs
 require 'sinatra'
 require 'sinatra/base'
@@ -11,9 +13,7 @@ require 'sinatra/activerecord'
 require 'warden'
 require 'bcrypt'
 
-unless ENV['APP_ENV'] == "production"
-  require 'pry'
-end
+require 'pry' unless ENV['APP_ENV'] == 'production'
 
 # modular Sinatra app inherit from Sinatra::Base
 class MyApp < Sinatra::Base
