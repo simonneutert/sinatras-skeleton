@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+
 
 class MyApp < Sinatra::Base
   use Warden::Manager do |config|
@@ -50,6 +50,7 @@ class MyApp < Sinatra::Base
       end
     end
   end
+
   get '/auth/login' do
     haml :"users/login"
   end

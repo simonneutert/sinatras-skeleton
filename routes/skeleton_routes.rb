@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+
 
 class MyApp < Sinatra::Base
   get '/skeletons' do

@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+
 
 # Welcome controller
 # @controller_name is used for declaring class on html body

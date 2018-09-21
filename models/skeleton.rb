@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+
 
 # sample Model model with a validation
 # hook is set in the corresponding route for saving a model
