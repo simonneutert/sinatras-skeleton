@@ -36,7 +36,7 @@ I want this Sinatra boilerplate app to:
 
 
 ## <a name="start"></a>Get started
-You need **Ruby (>= 2.4 and < 2.5)** and **Bundler**.
+You need **Ruby (>= 2.4)** and **Bundler** (of course).
 
 _If you do not have a local PostgresQL DB running, heroku can handle the code as is - do not forget to add **Heroku PostgresQL** addon in your dashboard._
 
