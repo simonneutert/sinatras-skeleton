@@ -1,5 +1,3 @@
-
-
 # Welcome controller
 # @controller_name is used for declaring class on html body
 # this is how you can make use of your javascript dependent on the conroller

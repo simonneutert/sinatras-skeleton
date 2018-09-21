@@ -1,5 +1,3 @@
-
-
 # require gems and libs
 require 'sinatra'
 require 'sinatra/base'

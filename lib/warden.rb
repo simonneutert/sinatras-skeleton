@@ -1,5 +1,3 @@
-
-
 class MyApp < Sinatra::Base
   use Warden::Manager do |config|
     # Tell Warden how to save our User info into a session.
