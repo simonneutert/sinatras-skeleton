@@ -30,7 +30,7 @@ class MyApp < Sinatra::Base
     env['REQUEST_METHOD'] = 'POST'
     # And we need to do the following to work with  Rack::MethodOverride
     env.each do |key, _value|
-      env[key]['_method'] = 'post'.dup if key == 'rack.request.form_hash'
+      env[key]['_method'] = +'post' if key == 'rack.request.form_hash'
     end
   end
   Warden::Strategies.add(:password) do
