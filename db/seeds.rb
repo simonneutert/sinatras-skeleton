@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # seed your database
 # rake db:seed
 Skeleton.create(name: 'Marley')

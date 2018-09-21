@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # routes
 # * you can have as many files as you like
 # * make sure to not to have duplicate routes!

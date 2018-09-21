@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # require gems and libs
 require 'sinatra'
 require 'sinatra/base'

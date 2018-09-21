@@ -1,4 +1,4 @@
-
+# frozen_string_literal: true
 
 # read more about what rake does
 # https://github.com/ruby/rake

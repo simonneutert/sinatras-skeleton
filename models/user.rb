@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # The user class requires "BCrypt" to validate the encrypted password in the database.
 class User < ActiveRecord::Base
   include BCrypt
