@@ -1,5 +1,7 @@
 # Basic Sinatra App with Sprockets, Warden, ActiveRecord and PostgresQL
 
+* __Important__ Ruby 2.5.x does not work with Sinatra 2.x, [sinatra/sinatra issue #1209](https://github.com/mikel/mail/issues/1209)
+
 **This repository aims to be a boilerplate for a modular and modern (v2) Sinatra app.**
 
 [demo on heroku](https://sinatras-skeleton.herokuapp.com) (admin area is locked up :wink:)
