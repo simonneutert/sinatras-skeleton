@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # require gems and libs
 require 'sinatra'
 require 'sinatra/base'
@@ -10,21 +12,38 @@ require 'execjs'
 require 'sinatra/activerecord'
 require 'warden'
 require 'bcrypt'
+require 'rack/protection'
 
 require 'pry' unless ENV['APP_ENV'] == 'production'
 
 # modular Sinatra app inherit from Sinatra::Base
 class MyApp < Sinatra::Base
+  # Boolean specifying whether the HTTP POST _method parameter
+  # hack should be enabled. When true, the actual HTTP request
+  # method is overridden by the value of the _method parameter
+  # included in the POST body. The _method hack is used to
+  # make POST requests look like other request methods (e.g., PUT, DELETE)
+  # and is typically only needed in shitty environments
+  # – like HTML form submission –
+  # that do not support the full range of HTTP methods.
+  use Rack::MethodOverride
+  set :method_override, true
+
   # session support for your app
   use Rack::Session::Pool
+
   # flash messages are not integrated, yet
   # but loaded just in case someone finds the time
   register Sinatra::Flash
+
   set :root, File.dirname(__FILE__)
   # files in static are served on "root"
   set :public_folder, File.dirname(__FILE__) + '/static'
   # set "/views/layout.haml" as the standard/global template wrapper (yield)
   set :haml, format: :html5, layout: :layout
+
+  # always add protection last!
+  use Rack::Protection
 end
 
 # require libs

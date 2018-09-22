@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MyApp < Sinatra::Base
   use Warden::Manager do |config|
     # Tell Warden how to save our User info into a session.
@@ -26,9 +28,11 @@ class MyApp < Sinatra::Base
     # we handle it only under "post '/auth/unauthenticated'", we need
     # to change request to POST
     env['REQUEST_METHOD'] = 'POST'
-    # And we need to do the following to work with  Rack::MethodOverride
+    # And we need to do the following to work with Rack::MethodOverride
+    # using `String.new("")` creates an unfrozen object, allowing this project
+    # to work with the frozen_string_literal
     env.each do |key, _value|
-      env[key]['_method'] = 'post' if key == 'rack.request.form_hash'
+      env[key]['_method'] = String.new('post') if key == 'rack.request.form_hash'
     end
   end
   Warden::Strategies.add(:password) do

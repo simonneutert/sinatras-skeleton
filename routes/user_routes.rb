@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MyApp < Sinatra::Base
   get '/users/:id' do
     env['warden'].authenticate!
