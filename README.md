@@ -38,6 +38,8 @@ I want this Sinatra boilerplate app to:
 ## <a name="start"></a>Get started
 You need **Ruby (>= 2.4)** and **Bundler** (of course).
 
+Have you heard of __frozen_string_literal__? No? [Read this](https://www.pluralsight.com/blog/software-development/ruby-2-3--working-with-immutable-strings-)
+
 _If you do not have a local PostgresQL DB running, heroku can handle the code as is - do not forget to add **Heroku PostgresQL** addon in your dashboard._
 
 * `$ git clone`
