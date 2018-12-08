@@ -38,7 +38,7 @@ GEM
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    rack (2.0.5)
+    rack (2.0.6)
     rack-protection (2.0.4)
       rack
     rake (12.3.1)
@@ -116,7 +116,7 @@ DEPENDENCIES
   yui-compressor
 
 RUBY VERSION
-   ruby 2.5.1p57
+   ruby 2.5.3p105
 
 BUNDLED WITH
    1.16.2
