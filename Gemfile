@@ -22,4 +22,5 @@ gem 'warden'
 
 group :test, :development do
   gem 'pry'
+  gem 'rubocop'
 end
