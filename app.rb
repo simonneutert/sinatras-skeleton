@@ -16,6 +16,17 @@ require 'rack/protection'
 
 require 'pry' unless ENV['APP_ENV'] == 'production'
 
+# require libs
+Dir['./lib/*.rb'].each { |file| require_relative file }
+# require configurations
+Dir['./config/*.rb'].each { |file| require_relative file }
+# require models
+Dir['./models/*.rb'].each { |file| require_relative file }
+# require controllers
+Dir['./controllers/*.rb'].each { |file| require_relative file }
+# require routes
+Dir['./routes/*.rb'].each { |file| require_relative file }
+
 # modular Sinatra app inherit from Sinatra::Base
 class MyApp < Sinatra::Base
   # Boolean specifying whether the HTTP POST _method parameter
@@ -45,14 +56,3 @@ class MyApp < Sinatra::Base
   # always add protection last!
   use Rack::Protection
 end
-
-# require libs
-Dir['./lib/*.rb'].each { |file| require_relative file }
-# require configurations
-Dir['./config/*.rb'].each { |file| require_relative file }
-# require models
-Dir['./models/*.rb'].each { |file| require_relative file }
-# require controllers
-Dir['./controllers/*.rb'].each { |file| require_relative file }
-# require routes
-Dir['./routes/*.rb'].each { |file| require_relative file }
