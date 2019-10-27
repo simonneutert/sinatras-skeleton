@@ -16,6 +16,7 @@ class MyApp < Sinatra::Base
     # view containing the form elements, see: views/form.haml)
     haml :"skeletons/new_skeleton_form"
   end
+  
   post '/submit' do
     env['warden'].authenticate!
     # post route that handles the given form data and saves it to the database
