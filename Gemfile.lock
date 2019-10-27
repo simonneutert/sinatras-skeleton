@@ -63,6 +63,8 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    sassc (2.2.1)
+      ffi (~> 1.9)
     sinatra (2.0.7)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -116,6 +118,7 @@ DEPENDENCIES
   rake
   rubocop
   sass
+  sassc
   sinatra (~> 2.0)
   sinatra-activerecord
   sinatra-contrib (~> 2.0)
@@ -128,7 +131,7 @@ DEPENDENCIES
   yui-compressor
 
 RUBY VERSION
-   ruby 2.5.3p105
+   ruby 2.6.5p114
 
 BUNDLED WITH
-   1.16.6
+   1.17.3

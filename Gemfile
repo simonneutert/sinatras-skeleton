@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby '2.5.3'
+ruby '2.6.5'
 
 gem 'sprockets'
 gem 'sinatra', '~> 2.0'
@@ -9,6 +9,7 @@ gem 'sinatra-flash'
 gem 'thin'
 gem 'haml'
 gem 'sass'
+gem 'sassc'
 gem 'turbolinks'
 gem 'yui-compressor'
 gem 'uglifier'
