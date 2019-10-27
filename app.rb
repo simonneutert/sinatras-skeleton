@@ -41,6 +41,8 @@ class MyApp < Sinatra::Base
   use Rack::MethodOverride
   set :method_override, true
 
+  set :sessions, true
+
   # session support for your app
   use Rack::Session::Pool
 
