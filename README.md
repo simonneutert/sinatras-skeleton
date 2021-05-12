@@ -30,7 +30,7 @@ I want this Sinatra boilerplate app to:
 * have an MVC-like structure
 * support Sass/Scss and CoffeeScript
 * party with [jQuery](http://jquery.com) and [Turbolinks](https://github.com/turbolinks/turbolinks)! Yes, Turbolinks.
-* roll an Authentication System
+* rolls with a very basic bcrypt/warden based Authentication System
 * use PostgresQL as Database
 * run on heroku (don't forget: `$ heroku config:add APP_ENV=production`)
 
