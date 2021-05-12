@@ -1,6 +1,6 @@
 # Basic Sinatra App with Sprockets, Warden, ActiveRecord and PostgresQL
 
-* __Important__ `# frozen_string_literal: true` does not work with Sinatra 2.x, [sinatra/sinatra issue #1209](https://github.com/mikel/mail/issues/1209)
+* __Important__ `# frozen_string_literal: true` may not work with Sinatra 2.x, [sinatra/sinatra issue #1209](https://github.com/mikel/mail/issues/1209)
 
 **This repository aims to be a boilerplate for a modular and modern (v2) Sinatra app.**
 
