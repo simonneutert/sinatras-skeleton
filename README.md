@@ -1,6 +1,6 @@
 # Basic Sinatra App with Sprockets, Warden, ActiveRecord and PostgresQL
 
-* __Important__ `# frozen_string_literal: true` may not work with Sinatra 2.x, [sinatra/sinatra issue #1209](https://github.com/mikel/mail/issues/1209)
+Take this as a working example and as an inspiration. Pull Requests are welcome 🙏
 
 ### Have you tried Roda?
 
@@ -48,7 +48,6 @@ I want this Sinatra boilerplate app to:
 * use PostgresQL as Database
 * run on heroku (don't forget: `$ heroku config:add APP_ENV=production`)
 
-
 ## <a name="start"></a>Get started
 You need **Ruby (>= 2.4)** and **Bundler** (of course).
 
@@ -63,8 +62,6 @@ _If you do not have a local PostgresQL DB running, heroku can handle the code as
 * `$ thin start` or `rerun rackup` ([rerun](https://github.com/alexch/rerun) gem - _not included by default!_)
 * edit titles in __views/layout.haml__ and __views/nav.haml__
 * check/set timezone __config/timezone.rb__
-
-
 
 ### now what?
 * read the credits
