@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby '2.6.6'
+ruby '2.7.6'
 
 gem 'sprockets'
 gem 'sinatra', '~> 2.2'
@@ -24,5 +24,6 @@ gem 'warden'
 
 group :test, :development do
   gem 'pry'
-  gem 'rubocop'
+  gem 'rubocop', require: false
+  gem 'solargraph', require: false
 end
