@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby '2.7.6'
+ruby '3.1.2'
 
 gem 'sprockets'
 gem 'sinatra', '~> 2.2'
