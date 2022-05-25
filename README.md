@@ -49,7 +49,7 @@ I want this Sinatra boilerplate app to:
 * run on heroku (don't forget: `$ heroku config:add APP_ENV=production`)
 
 ## <a name="start"></a>Get started
-You need **Ruby (>= 2.4)** and **Bundler** (of course).
+You need **Ruby (>= 2.7)** and **Bundler** (of course).
 
 Have you heard of __frozen_string_literal__? No? [Read this](https://www.pluralsight.com/blog/software-development/ruby-2-3--working-with-immutable-strings-)
 
