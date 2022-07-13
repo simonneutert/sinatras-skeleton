@@ -153,7 +153,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
-  activesupport (= 7.0.3.1)
+  activesupport (>= 6.0.3.1)
   bcrypt
   coffee-script
   haml
