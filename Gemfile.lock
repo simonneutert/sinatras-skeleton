@@ -41,7 +41,7 @@ GEM
     mini_portile2 (2.8.0)
     minitest (5.16.2)
     multi_json (1.15.0)
-    mustermann (2.0.2)
+    mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     nokogiri (1.13.9)
       mini_portile2 (~> 2.8.0)
@@ -59,7 +59,7 @@ GEM
       method_source (~> 1.0)
     racc (1.6.0)
     rack (2.2.4)
-    rack-protection (2.2.3)
+    rack-protection (3.0.4)
       rack
     rainbow (3.1.1)
     rake (13.0.6)
@@ -90,19 +90,19 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
     sassc (2.4.0)
       ffi (~> 1.9)
-    sinatra (2.2.3)
-      mustermann (~> 2.0)
-      rack (~> 2.2)
-      rack-protection (= 2.2.3)
+    sinatra (3.0.4)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.0.4)
       tilt (~> 2.0)
     sinatra-activerecord (2.0.25)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
-    sinatra-contrib (2.2.3)
+    sinatra-contrib (3.0.4)
       multi_json
-      mustermann (~> 2.0)
-      rack-protection (= 2.2.3)
-      sinatra (= 2.2.3)
+      mustermann (~> 3.0)
+      rack-protection (= 3.0.4)
+      sinatra (= 3.0.4)
       tilt (~> 2.0)
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
@@ -163,9 +163,9 @@ DEPENDENCIES
   rubocop
   sass
   sassc
-  sinatra (~> 2.2)
+  sinatra (~> 3.0)
   sinatra-activerecord
-  sinatra-contrib (~> 2.2)
+  sinatra-contrib (~> 3.0)
   sinatra-flash
   solargraph
   sprockets
@@ -179,4 +179,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.14
+   2.3.26
