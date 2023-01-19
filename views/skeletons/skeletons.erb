@@ -1,0 +1,11 @@
+<h3>All Skeletons</h3>
+<ul>
+  <% @skeletons.each do |skeleton| %>
+    <li>
+      <a href="/skeletons/<%= skeleton.id %>/edit">
+        <%= skeleton.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+<a href="/">Back to Home</a>

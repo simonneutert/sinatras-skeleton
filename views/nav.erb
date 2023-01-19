@@ -1,0 +1,48 @@
+<div class="custom-menu-wrapper">
+  <div class="pure-menu custom-menu custom-menu-top">
+    <a href='/' class="pure-menu-heading custom-menu-brand">SkeletonApp</a>
+    <a href='#' class="custom-menu-toggle" id= "toggle">
+      <s class="bar"></s>
+      <s class="bar"></s>
+      <s class="bar"></s>
+    </a>
+  </div>
+  <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+    <div class="custom-menu-screen"></div>
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item">
+        <a class="pure-menu-link" href="/">Start Adventure</a>
+      </li>
+      <li class="pure-menu-item">
+        <a class="pure-menu-link" href="/database">Questlog</a>
+      </li>
+      <li class="pure-menu-item">
+        <a class="pure-menu-link" href="/cave/Sinatra">Enter Cave</a>
+      </li>
+      <li class="pure-menu-item">
+        <a class="pure-menu-link" href="/time">Go further</a>
+      </li>
+      <% unless env['warden'].user %>
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/new_skeleton_form">Go even further</a>
+        </li>
+      <% end %>
+      <!--/ this nav is only shown for logged in users
+      -->
+      <% if env['warden'].user %>
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/new_skeleton_form">New Skeleton</a>
+        </li>
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/skeletons">Skeletons</a>
+        </li>
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/users/<%= env['warden'].user.id %>">Inventory</a>
+        </li>
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/auth/logout">Retreat!</a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

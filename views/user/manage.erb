@@ -1,0 +1,23 @@
+<!--/ simple form that posts to "/admin/:admin_id" -->
+<h3>Edit User</h3>
+<form action="/user/<%= @user.id %>" method="POST">
+  <div class="form">
+    Username:
+    <input type="text" name="user[username]" value="<%= @user.username %>" id="user_name">
+    <br/>
+    <br/>
+  </div>
+  <div class="form">
+    New Password:
+    <input type="password" name="user[password]" id="user_password">
+    <br/>
+    <br/>
+  </div>
+  <div class="form">
+    Repeat new Password:
+    <input type="password" name="user[rpassword]" id="ruser_password">
+    <br/>
+    <br/>
+  </div>
+  <input input type="submit" value="Submit">
+</form>

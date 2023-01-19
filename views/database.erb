@@ -1,0 +1,54 @@
+<h1>PostgresQL based</h1>
+<p>
+  easy peasy database handling, because this skeleton comes with
+  <strong>Rake</strong>
+  and
+  <strong>ActiveRecord</strong>
+</p>
+<hr/>
+<h2>Use Sample Data to test it out</h2>
+<p>
+  Start your local PostgresQL and run:
+  <br/>
+  <strong>rake db:create</strong>
+  <br/>
+  <strong>rake db:setup</strong>
+</p>
+<hr/>
+<h2>Configure your own database</h2>
+<p>
+  Delete existing migrations in
+  <em>db/migrate/</em>
+</p>
+<p>
+  Delete or modify
+  <em>db/seeds.rb</em>
+</p>
+<p>
+  set your models properly
+  <em>models/*.rb</em>
+</p>
+<ul>
+  <li>
+    edit
+    <strong>config/database.yml</strong>
+  </li>
+  <li>
+    create database
+    <strong>rake db:create</strong>
+  </li>
+  <li>
+    create a migration
+    <strong>rake db:create_migration NAME=create_model</strong>
+    (you can set the NAME attribute to whatever fits your needs)
+  </li>
+  <li>
+    edit the created migration file in
+    <strong>db/migrate</strong>
+    <a>(href="http://guides.rubyonrails.org/active_record_migrations.html" target="_blank") (read more on migrations)</a>
+  </li>
+  <li>
+    Run
+    <strong>rake db:migrate</strong>
+  </li>
+</ul>

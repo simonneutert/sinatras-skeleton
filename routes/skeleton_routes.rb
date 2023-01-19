@@ -2,10 +2,10 @@
 
 class MyApp < Sinatra::Base
   get '/skeletons' do
-    # view that displays data, see: views/skeletons.haml
+    # view that displays data, see: views/skeletons.erb
     # (skeleton in skeletons/skeleton.rb)
     @skeletons = Skeleton.all
-    haml :"skeletons/skeletons"
+    erb :"skeletons/skeletons"
   end
 
   # Database Interaction CRUD
@@ -13,8 +13,8 @@ class MyApp < Sinatra::Base
   # "CREATE", part of the C in CRUD
   get '/new_skeleton_form' do
     env['warden'].authenticate!
-    # view containing the form elements, see: views/form.haml)
-    haml :"skeletons/new_skeleton_form"
+    # view containing the form elements, see: views/form.erb)
+    erb :"skeletons/new_skeleton_form"
   end
   
   post '/submit' do
@@ -27,7 +27,7 @@ class MyApp < Sinatra::Base
       redirect '/skeletons'
     else
       @errors = @skeleton.errors
-      haml :"skeletons/new_skeleton_form"
+      erb :"skeletons/new_skeleton_form"
     end
   end
 
@@ -35,7 +35,7 @@ class MyApp < Sinatra::Base
   get '/skeletons/:id/edit' do
     env['warden'].authenticate!
     @skeleton = Skeleton.find(params[:id])
-    haml :"skeletons/edit_skeleton_form"
+    erb :"skeletons/edit_skeleton_form"
   end
 
   # "UPDATE", part of the U in CRUD
@@ -46,7 +46,7 @@ class MyApp < Sinatra::Base
       redirect to('/skeletons')
     else
       @errors = @skeleton.errors
-      haml :"skeletons/edit_skeleton_form"
+      erb :"skeletons/edit_skeleton_form"
     end
   end
 

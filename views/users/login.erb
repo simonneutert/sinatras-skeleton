@@ -1,0 +1,14 @@
+<!--/ login form posting to "/auth/login" -->
+<!--/ see "lib/warden.rb" why -->
+<h1>You shall not pass!</h1>
+<form action="/auth/login" method="post">
+  <p>
+    Username:
+    <input name="user[username]" type="text"></input>
+  </p>
+  <p>
+    Password:
+    <input name="user[password]" type="password"></input>
+  </p>
+  <input type="submit" value="Log In"></input>
+</form>

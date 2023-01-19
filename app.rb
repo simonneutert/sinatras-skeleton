@@ -39,6 +39,8 @@ class MyApp < Sinatra::Base
   # – like HTML form submission –
   # that do not support the full range of HTTP methods.
   use Rack::MethodOverride
+  
+
   set :method_override, true
 
   set :sessions, true
@@ -53,8 +55,8 @@ class MyApp < Sinatra::Base
   set :root, File.dirname(__FILE__)
   # files in static are served on "root"
   set :public_folder, File.dirname(__FILE__) + '/static'
-  # set "/views/layout.haml" as the standard/global template wrapper (yield)
-  set :haml, format: :html5, layout: :layout
+  # set "/views/layout.erb" as the standard/global template wrapper (yield)
+  set :erb, format: :html5, layout: :layout
 
   # always add protection last!
   use Rack::Protection

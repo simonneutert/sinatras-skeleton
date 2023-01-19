@@ -12,7 +12,7 @@ class MyApp < Sinatra::Base
     # use class/controller
     @welcome = Welcome.new
     @controller_name = @welcome.controller_name
-    haml :index
+    erb :index
   end
 
   get '/cave/:name' do
@@ -23,9 +23,9 @@ class MyApp < Sinatra::Base
     # @n stores params['name']
     @n = params['name']
     if @n == 'Sinatra'
-      haml :cave
+      erb :cave
     else
-      haml "You yell: \"#{@n}\" into the dark cave. No echo."
+      erb "You yell: \"#{@n}\" into the dark cave. No echo."
     end
   end
 
@@ -33,10 +33,10 @@ class MyApp < Sinatra::Base
     @controller_name = 'time'
     # edit timezone in config/timezone.rb
     @time = Time.now.to_local.strftime('%H:%M:%S')
-    haml :time
+    erb :time
   end
 
   get '/database' do
-    haml :database
+    erb :database
   end
 end

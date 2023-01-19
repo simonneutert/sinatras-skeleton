@@ -1,0 +1,19 @@
+<!-- simple form that posts to "/submit" -->
+<h3>Edit Skeleton</h3>
+<% if @errors %>
+  <div class="validation-errors">
+    <% @errors.each do |attr, msg| %>
+      <p>
+        <%= attr %>
+        <%= msg %>
+      </p>
+    <% end %>
+  </div>
+<% end %>
+<form action="/skeletons/<%= @skeleton.id %>" method="POST">
+  <input type="text" name="skeleton[name]" value="<%= @skeleton.name %>" id="skeleton_name">
+  <input input type="submit" value="Submit">
+</form>
+<form action="/skeletons/<%= @skeleton.id %>/destroy" method="POST">
+  <input input type="submit" value="Destroy">
+</form>

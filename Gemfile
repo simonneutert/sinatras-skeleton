@@ -27,3 +27,5 @@ group :test, :development do
   gem 'rubocop', require: false
   gem 'solargraph', require: false
 end
+
+gem "erubi", "~> 1.12"
