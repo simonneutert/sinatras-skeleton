@@ -33,7 +33,7 @@ I started working my way through the sinatra docs, aiming for a setup that can e
 
 > Have you tried Roda, Sequel and Rodauth?  
 
-Yes! And I totally use that setup whenever possible (November 2021) and you should try at least roda as a POC 😎 I am 100 % serious! There's nothing wrong with sinatra, but roda kills it - give its plugins and how you do thing a grind. The journy will undoubtedly make you a better (ruby) programmer.
+Yes! And I totally use that setup whenever possible (November 2021) and you should try at least roda as a POC 😎 I am 100 % serious! There's nothing wrong with sinatra, but roda kills it. The journey will undoubtedly make you a better (ruby) programmer.
 
 ## <a name="what"></a>What is in?
 
