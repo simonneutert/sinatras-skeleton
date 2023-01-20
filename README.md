@@ -12,7 +12,7 @@ think sinatra is nice? Don't forget to [give Roda a chance](https://github.com/j
 
 **This repository aims to be a boilerplate for a modular and modern (v2) Sinatra app.**
 
-[demo on heroku](https://sinatras-skeleton.herokuapp.com) (admin area is locked up :wink:)
+there used to be a demo on heroku, but heroku is no more 🪦
 
 *please check out the [credits](#credits) section! Without the community, this never would have been possible. Thank you.*
 
