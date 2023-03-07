@@ -18,7 +18,7 @@ gem "activesupport", ">= 6.0.3.1"
 gem "activerecord"
 gem "sinatra-activerecord"
 gem "rake"
-gem 'pg', '~> 1.0'
+gem 'pg', '~> 1.4'
 gem 'bcrypt'
 gem 'warden'
 
