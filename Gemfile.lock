@@ -70,11 +70,11 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rbs (2.8.4)
-    regexp_parser (2.7.0)
+    regexp_parser (2.8.0)
     reverse_markdown (2.1.1)
       nokogiri
     rexml (3.2.5)
-    rubocop (1.49.0)
+    rubocop (1.50.2)
       json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.2.0.0)
