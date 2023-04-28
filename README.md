@@ -5,7 +5,7 @@ Take this as a working example and as an inspiration. Pull Requests are welcome 
 ### Have you tried Roda?
 
 think sinatra is nice? Don't forget to [give Roda a chance](https://github.com/jeremyevans/roda-sequel-stack)!  
-search through my repos 
+search through my repos 😉😇
 
 ---
 
