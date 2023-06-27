@@ -1,12 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (7.0.5)
-      activesupport (= 7.0.5)
-    activerecord (7.0.5)
-      activemodel (= 7.0.5)
-      activesupport (= 7.0.5)
-    activesupport (7.0.5)
+    activemodel (7.0.5.1)
+      activesupport (= 7.0.5.1)
+    activerecord (7.0.5.1)
+      activemodel (= 7.0.5.1)
+      activesupport (= 7.0.5.1)
+    activesupport (7.0.5.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -32,7 +32,7 @@ GEM
       temple (>= 0.8.2)
       thor
       tilt
-    i18n (1.13.0)
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.4)
     json (2.6.3)
@@ -43,7 +43,7 @@ GEM
     language_server-protocol (3.17.0.3)
     method_source (1.0.0)
     mini_portile2 (2.8.1)
-    minitest (5.18.0)
+    minitest (5.18.1)
     multi_json (1.15.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
