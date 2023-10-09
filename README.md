@@ -2,6 +2,8 @@
 
 Take this as a working example and as an inspiration. Pull Requests are welcome 🙏
 
+[![ruby](https://github.com/simonneutert/sinatras-skeleton/actions/workflows/ruby.yml/badge.svg)](https://github.com/simonneutert/sinatras-skeleton/actions/workflows/ruby.yml)
+
 ### Have you tried Roda?
 
 think sinatra is nice? Don't forget to [give Roda a chance](https://github.com/jeremyevans/roda-sequel-stack)!  
