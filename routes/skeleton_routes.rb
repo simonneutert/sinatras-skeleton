@@ -5,7 +5,7 @@ class MyApp < Sinatra::Base
     # view that displays data, see: views/skeletons.erb
     # (skeleton in skeletons/skeleton.rb)
     @skeletons = Skeleton.all
-    erb :"skeletons/skeletons"
+    erb :'skeletons/skeletons'
   end
 
   # Database Interaction CRUD
@@ -14,9 +14,9 @@ class MyApp < Sinatra::Base
   get '/new_skeleton_form' do
     env['warden'].authenticate!
     # view containing the form elements, see: views/form.erb)
-    erb :"skeletons/new_skeleton_form"
+    erb :'skeletons/new_skeleton_form'
   end
-  
+
   post '/submit' do
     env['warden'].authenticate!
     # post route that handles the given form data and saves it to the database
@@ -27,7 +27,7 @@ class MyApp < Sinatra::Base
       redirect '/skeletons'
     else
       @errors = @skeleton.errors
-      erb :"skeletons/new_skeleton_form"
+      erb :'skeletons/new_skeleton_form'
     end
   end
 
@@ -35,7 +35,7 @@ class MyApp < Sinatra::Base
   get '/skeletons/:id/edit' do
     env['warden'].authenticate!
     @skeleton = Skeleton.find(params[:id])
-    erb :"skeletons/edit_skeleton_form"
+    erb :'skeletons/edit_skeleton_form'
   end
 
   # "UPDATE", part of the U in CRUD
@@ -46,7 +46,7 @@ class MyApp < Sinatra::Base
       redirect to('/skeletons')
     else
       @errors = @skeleton.errors
-      erb :"skeletons/edit_skeleton_form"
+      erb :'skeletons/edit_skeleton_form'
     end
   end
 

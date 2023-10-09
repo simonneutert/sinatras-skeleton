@@ -54,7 +54,7 @@ class MyApp < Sinatra::Base
   end
 
   get '/auth/login' do
-    erb :"users/login"
+    erb :'users/login'
   end
 
   post '/auth/login' do

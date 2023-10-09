@@ -4,9 +4,9 @@ class MyApp < Sinatra::Base
   get '/users/:id' do
     env['warden'].authenticate!
     @user = User.find(params['id'])
-    erb :"users/manage"
+    erb :'users/manage'
   end
-  
+
   post '/users/:id' do
     env['warden'].authenticate!
     @user = User.find(params['id'])
