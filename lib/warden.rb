@@ -31,7 +31,7 @@ class MyApp < Sinatra::Base
     # And we need to do the following to work with Rack::MethodOverride
     # using `String.new("")` creates an unfrozen object, allowing this project
     # to work with the frozen_string_literal
-    env.each do |key, _value|
+    env.each_key do |key|
       env[key]['_method'] = String.new('post') if key == 'rack.request.form_hash'
     end
   end
