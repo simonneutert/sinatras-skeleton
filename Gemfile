@@ -4,13 +4,16 @@ source 'https://rubygems.org'
 
 ruby '3.2.2'
 
+gem 'pg', '~> 1.5'
+gem 'puma'
+
 gem 'activerecord'
 gem 'activesupport', '>= 6.0.3.1'
 gem 'bcrypt'
 gem 'coffee-script'
 gem 'erubi', '~> 1.12'
 gem 'haml'
-gem 'pg', '~> 1.5'
+gem 'rack', '~> 2.2'
 gem 'rake'
 gem 'sass'
 gem 'sassc'
@@ -19,7 +22,6 @@ gem 'sinatra-activerecord'
 gem 'sinatra-contrib', '~> 3.2'
 gem 'sinatra-flash'
 gem 'sprockets'
-gem 'thin'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'warden'
@@ -30,5 +32,5 @@ group :test, :development do
   gem 'rack-test', '~> 2.1'
   gem 'rubocop', require: false
   gem 'solargraph', require: false
-  gem 'test-unit', '~> 3.6'
+  gem 'test-unit', '~> 3.6', require: false
 end

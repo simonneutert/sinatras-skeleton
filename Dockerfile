@@ -1,7 +1,16 @@
 FROM ruby:3.2-slim
 
+ENV RUBY_YJIT_ENABLE=1
+
 # Install dependencies
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
+RUN apt-get update -qq && \
+    apt-get install -y \
+        build-essential \
+        curl \
+        libpq-dev
+
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+    apt-get install -y nodejs
 
 WORKDIR /app
 

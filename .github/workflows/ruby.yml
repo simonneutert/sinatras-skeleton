@@ -55,4 +55,4 @@ jobs:
         run: bundle exec rubocop
 
       - name: Run tests
-        run: bundle exec ruby test/run_test.rb
+        run: bundle exec rake test

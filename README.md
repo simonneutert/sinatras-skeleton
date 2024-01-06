@@ -58,7 +58,8 @@ You need **Ruby (>= 3.2)** and **Bundler** (of course).
 * `$ bundle install`
 * edit __config/database.yml__
 * `$ rake db:setup`
-* `$ thin start` or `rerun rackup` ([rerun](https://github.com/alexch/rerun) gem - _not included by default!_)
+* `$ bundle exec puma` or `rerun rackup` ([rerun](https://github.com/alexch/rerun) gem - _not included by default!_)
+* visit `localhost:9292` in your browser
 * edit titles in __views/layout.erb__ and __views/nav.erb__
 * check/set timezone __config/timezone.rb__
 

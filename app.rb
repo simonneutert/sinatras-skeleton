@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-# require gems and libs
+require 'bundler/setup'
+
 require 'sinatra'
 require 'sinatra/base'
 require 'sinatra/flash'
@@ -11,22 +12,11 @@ require 'sassc'
 require 'coffee-script'
 require 'execjs'
 require 'sinatra/activerecord'
-require 'warden'
 require 'bcrypt'
 require 'rack/protection'
+require 'warden'
 
 require 'pry' unless ENV['APP_ENV'] == 'production'
-
-# require libs
-Dir['./lib/*.rb'].each { |file| require_relative file }
-# require configurations
-Dir['./config/*.rb'].each { |file| require_relative file }
-# require models
-Dir['./models/*.rb'].each { |file| require_relative file }
-# require controllers
-Dir['./controllers/*.rb'].each { |file| require_relative file }
-# require routes
-Dir['./routes/*.rb'].each { |file| require_relative file }
 
 # modular Sinatra app inherit from Sinatra::Base
 class MyApp < Sinatra::Base
@@ -60,3 +50,14 @@ class MyApp < Sinatra::Base
   # always add protection last!
   use Rack::Protection
 end
+
+# require libs
+Dir['./lib/*.rb'].each { |file| require_relative file }
+# require configurations
+Dir['./config/*.rb'].each { |file| require_relative file }
+# require models
+Dir['./models/*.rb'].each { |file| require_relative file }
+# require controllers
+Dir['./controllers/*.rb'].each { |file| require_relative file }
+# require routes
+Dir['./routes/*.rb'].each { |file| require_relative file }

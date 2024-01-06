@@ -21,11 +21,11 @@ class MyApp < Sinatra::Base
     # matches "GET /hello/foo" and "GET /hello/bar"
     # params['name'] is 'foo' or 'bar'
     # @n stores params['name']
-    @n = params['name']
-    if @n == 'Sinatra'
+    @name = params['name']
+    if @name == 'Sinatra'
       erb :cave
     else
-      erb "You yell: \"#{@n}\" into the dark cave. No echo."
+      erb "You yell: \"#{@name}\" into the dark cave. No echo."
     end
   end
 

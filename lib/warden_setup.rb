@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class MyApp < Sinatra::Base
-  use Warden::Manager do |config|
+  use ::Warden::Manager do |config|
     # Tell Warden how to save our User info into a session.
     # Sessions can only take strings, not Ruby code, we'll store
     # the User's `id`
@@ -23,7 +23,7 @@ class MyApp < Sinatra::Base
     config.failure_app = self
   end
 
-  Warden::Manager.before_failure do |env, _opts|
+  ::Warden::Manager.before_failure do |env, _opts|
     # Because authentication failure can happen on any request but
     # we handle it only under "post '/auth/unauthenticated'", we need
     # to change request to POST
@@ -35,7 +35,7 @@ class MyApp < Sinatra::Base
       env[key]['_method'] = String.new('post') if key == 'rack.request.form_hash'
     end
   end
-  Warden::Strategies.add(:password) do
+  ::Warden::Strategies.add(:password) do
     def valid?
       params['user'] && params['user']['username'] && params['user']['password']
     end
