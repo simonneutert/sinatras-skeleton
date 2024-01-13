@@ -35,7 +35,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby: ["ruby-3.2"]
+        ruby: ["ruby-3.3"]
         os: [macos-latest, ubuntu-latest]
 
     steps:

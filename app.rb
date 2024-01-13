@@ -2,13 +2,14 @@
 
 require 'bundler/setup'
 
+require 'sassc'
+require 'sass-embedded'
+
 require 'sinatra'
 require 'sinatra/base'
 require 'sinatra/flash'
 require 'sprockets'
 require 'uglifier'
-require 'sass'
-require 'sassc'
 require 'coffee-script'
 require 'execjs'
 require 'sinatra/activerecord'

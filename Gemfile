@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.2.2'
+ruby '3.3.0'
 
 gem 'pg', '~> 1.5'
 gem 'puma'
@@ -15,8 +15,8 @@ gem 'erubi', '~> 1.12'
 gem 'haml'
 gem 'rack', '~> 2.2'
 gem 'rake'
-gem 'sass'
 gem 'sassc'
+gem 'sass-embedded'
 gem 'sinatra', '~> 3.2'
 gem 'sinatra-activerecord'
 gem 'sinatra-contrib', '~> 3.2'
