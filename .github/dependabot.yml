@@ -7,6 +7,13 @@ version: 2
 updates:
   - package-ecosystem: "bundler" # See documentation for possible values
     directory: "/" # Location of package manifests
+    groups:
+      patch-and-minor-dependencies:
+        update-types: ["patch", "minor"]
     schedule:
       interval: "weekly"
-      day: "thursday"
+      day: "saturday"
+      time: "11:45"
+      timezone: "Europe/Berlin"
+    assignees:
+      - "simonneutert"
