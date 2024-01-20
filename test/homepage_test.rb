@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-OUTER_APP = Rack::Builder.parse_file('config.ru').first
+OUTER_APP = Rack::Builder.parse_file('config.ru')
 
 class HomepageTest < Test::Unit::TestCase
   include Rack::Test::Methods
