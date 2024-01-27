@@ -1,4 +1,4 @@
-# Basic Sinatra v3 App with Sprockets, Warden, ActiveRecord and Postgres
+# Basic Sinatra ~v3~ v4 🥳 App with Sprockets, Warden, ActiveRecord and Postgres
 
 Take this as a working example and as an inspiration. Pull Requests are welcome 🙏
 
