@@ -11,6 +11,11 @@ on:
 jobs:
   ruby-qa:
     runs-on: ubuntu-latest
+    
+    env:
+      RACK_ENV: test
+      DATABASE_USER: sinatra
+      DATABASE_PASSWORD: sinatra
 
     services:
       postgres:
@@ -26,11 +31,6 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-    env:
-      RACK_ENV: test
-      DATABASE_URL: localhost
-      DATABASE_USER: sinatra
-      DATABASE_PASSWORD: sinatra
 
     strategy:
       fail-fast: false
@@ -40,7 +40,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1

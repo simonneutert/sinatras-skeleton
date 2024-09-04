@@ -1,10 +1,11 @@
 AllCops:
   NewCops: enable
+  Exclude:
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'config.ru'
+    - 'db/schema.rb'
 
 Style/Documentation:
   Enabled: false
-
-Style/FrozenStringLiteralComment:
-  Exclude:
-    - 'db/**/*'
-    - 'config.ru'
+   
