@@ -15,9 +15,9 @@ browse through my repos 😉😇
 
 **This repository aims to be a boilerplate for a modular and modern (v2) Sinatra app.**
 
-there used to be a demo on heroku, but heroku is no more 🪦
+There used to be a demo on heroku, but heroku is no more (free of charge at least) 🪦
 
-*please check out the [credits](#credits) section! Without the community, this never would have been possible. Thank you.*
+*Please check out the [credits](#credits) section! Without the community, this never would have been possible. Thank you.*
 
 * [Why?](#why)
 * [What is in?](#what)

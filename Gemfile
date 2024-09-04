@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.3.0'
+ruby '3.3.5'
 
 gem 'pg', '~> 1.5'
 gem 'puma'
@@ -13,6 +13,7 @@ gem 'bcrypt'
 gem 'coffee-script'
 gem 'erubi', '~> 1.12'
 gem 'haml'
+gem 'ostruct', '~> 0.6.0'
 gem 'rack', '~> 3.0'
 gem 'rake'
 gem 'sassc'

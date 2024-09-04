@@ -5,8 +5,8 @@ test:
   adapter: postgresql
   encoding: unicode
   database: sinatras-skeleton
-  username: sinatra
-  password: sinatra
+  username: <%= ENV.fetch('DATABASE_USER', 'postgres') %>
+  password: <%= ENV.fetch('DATABASE_PASSWORD', 'postgres') %>
   pool: 5
 
 development:
@@ -14,8 +14,8 @@ development:
   adapter: postgresql
   encoding: unicode
   database: sinatras-skeleton
-  username: sinatra
-  password: sinatra
+  username: <%= ENV.fetch('DATABASE_USER', 'postgres') %>
+  password: <%= ENV.fetch('DATABASE_PASSWORD', 'postgres') %>
   pool: 5
 
 production:
@@ -23,6 +23,6 @@ production:
   adapter: postgresql
   encoding: unicode
   database: sinatras-skeleton
-  username: sinatra
-  password: sinatra
+  username: <%= ENV.fetch('DATABASE_USER', 'postgres') %>
+  password: <%= ENV.fetch('DATABASE_PASSWORD', 'postgres') %>
   pool: 5
