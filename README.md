@@ -13,7 +13,7 @@ browse through my repos 😉😇
 
 ## What this Project aims to be
 
-**This repository aims to be a boilerplate for a modular and modern (v2) Sinatra app.**
+**This repository aims to be a boilerplate for a modular and modern (v4) Sinatra app.**
 
 There used to be a demo on heroku, but heroku is no more (free of charge at least) 🪦
 
