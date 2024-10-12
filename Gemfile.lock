@@ -64,7 +64,7 @@ GEM
       temple (>= 0.8.2)
       thor
       tilt
-    i18n (1.14.5)
+    i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.6.0)
     json (2.7.2)
@@ -94,11 +94,11 @@ GEM
       racc (~> 1.4)
     ostruct (0.6.0)
     parallel (1.26.3)
-    parser (3.3.4.2)
+    parser (3.3.5.0)
       ast (~> 2.4.1)
       racc
     pg (1.5.8)
-    power_assert (2.0.3)
+    power_assert (2.0.4)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -122,7 +122,7 @@ GEM
     regexp_parser (2.9.2)
     reverse_markdown (2.1.1)
       nokogiri
-    rexml (3.3.7)
+    rexml (3.3.8)
     rubocop (1.66.1)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
@@ -133,7 +133,7 @@ GEM
       rubocop-ast (>= 1.32.2, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.32.2)
+    rubocop-ast (1.32.3)
       parser (>= 3.3.1.0)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
@@ -201,7 +201,7 @@ GEM
       concurrent-ruby (~> 1.0)
     uglifier (4.2.1)
       execjs (>= 0.3.0, < 3)
-    unicode-display_width (2.5.0)
+    unicode-display_width (2.6.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     webrick (1.8.2)
@@ -250,4 +250,4 @@ RUBY VERSION
    ruby 3.3.5p100
 
 BUNDLED WITH
-   2.5.18
+   2.5.21
