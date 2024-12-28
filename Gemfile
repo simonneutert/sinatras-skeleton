@@ -31,7 +31,7 @@ gem 'yui-compressor'
 
 group :test, :development do
   gem 'pry'
-  gem 'rack-test', '~> 2.1'
+  gem 'rack-test', '~> 2.2'
   gem 'rubocop', require: false
   gem 'solargraph', require: false
   gem 'test-unit', '~> 3.6', require: false
