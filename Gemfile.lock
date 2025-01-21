@@ -38,28 +38,8 @@ GEM
     e2mmap (0.1.0)
     erubi (1.13.1)
     execjs (2.9.1)
-    ffi (1.17.0-aarch64-linux-gnu)
-    ffi (1.17.0-arm-linux-gnu)
-    ffi (1.17.0-arm64-darwin)
-    ffi (1.17.0-x86-linux-gnu)
-    ffi (1.17.0-x86_64-darwin)
-    ffi (1.17.0-x86_64-linux-gnu)
+    ffi (1.17.0)
     google-protobuf (4.29.2)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.29.2-aarch64-linux)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.29.2-arm64-darwin)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.29.2-x86-linux)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.29.2-x86_64-darwin)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.29.2-x86_64-linux)
       bigdecimal
       rake (>= 13)
     haml (6.3.0)
@@ -77,22 +57,14 @@ GEM
     language_server-protocol (3.17.0.3)
     logger (1.6.3)
     method_source (1.1.0)
+    mini_portile2 (2.8.8)
     minitest (5.25.4)
     multi_json (1.15.0)
     mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.7.4)
-    nokogiri (1.16.7-aarch64-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.7-arm-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.7-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.16.7-x86-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.7-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.16.7-x86_64-linux)
+    nokogiri (1.16.7)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     ostruct (0.6.1)
     parallel (1.26.3)
@@ -253,7 +225,7 @@ DEPENDENCIES
   yui-compressor
 
 RUBY VERSION
-   ruby 3.3.6p108
+   ruby 3.4.1p0
 
 BUNDLED WITH
    2.5.21
