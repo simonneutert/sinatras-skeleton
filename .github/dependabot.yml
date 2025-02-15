@@ -11,8 +11,8 @@ updates:
       patch-and-minor-dependencies:
         update-types: ["patch", "minor"]
     schedule:
-      interval: "weekly"
-      day: "saturday"
+      interval: "monthly"
+      day: "monday"
       time: "11:45"
       timezone: "Europe/Berlin"
     assignees:
