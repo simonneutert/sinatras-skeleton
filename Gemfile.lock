@@ -210,7 +210,7 @@ GEM
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
-    uri (1.0.2)
+    uri (1.0.3)
     warden (1.2.9)
       rack (>= 2.0.9)
     yard (0.9.37)
@@ -255,7 +255,7 @@ DEPENDENCIES
   yui-compressor
 
 RUBY VERSION
-   ruby 3.4.1p0
+   ruby 3.4.2p28
 
 BUNDLED WITH
    2.5.21
