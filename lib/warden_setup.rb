@@ -45,7 +45,7 @@ class MyApp < Sinatra::Base
 
       if user.nil?
         throw(:warden, message: 'The username you entered does not exist.')
-      elsif user.authenticate(params['user']['password'])
+      elsif user.authenticate?(params['user']['password'])
         success!(user)
       else
         throw(:warden, message: 'The username and password combination ')
