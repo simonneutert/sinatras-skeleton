@@ -89,4 +89,17 @@ class HomepageTest < Test::Unit::TestCase
     follow_redirect!
     assert last_response.body.include?('Access denied')
   end
+
+  def test_user_cannot_update_other_users_profile
+    post '/auth/login', user: { username: 'User', password: 'Secret' }
+    assert last_response.redirect?
+    follow_redirect!
+    assert last_response.ok?
+
+    # Try to update User2's profile (should be denied)
+    post '/users/2', user: { username: 'hacked', password: 'newpass', rpassword: 'newpass' }
+    assert last_response.redirect?
+    follow_redirect!
+    assert last_response.body.include?('Stop trying to hack')
+  end
 end
