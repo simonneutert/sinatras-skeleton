@@ -43,7 +43,7 @@ Yes! And I totally use that setup whenever possible (November 2021) and you shou
 I want this Sinatra boilerplate app to:
 
 * work with Bundler
-* use ORM is ActiveRecord
+* use ActiveRecord as ORM
 * have an MVC-like structure
 * support Sass/Scss and CoffeeScript
 * party with [jQuery](http://jquery.com) and [Turbolinks](https://github.com/turbolinks/turbolinks)! Yes, Turbolinks.
