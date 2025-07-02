@@ -57,6 +57,7 @@ You need **Ruby (>= 3.2)** and **Bundler** (of course).
 * `$ git clone`
 * `$ bundle install`
 * edit __config/database.yml__
+* set `SESSION_SECRET` environment variable (see `.env.example`)
 * `$ rake db:setup`
 * `$ bundle exec puma` or `rerun rackup` ([rerun](https://github.com/alexch/rerun) gem - _not included by default!_)
 * visit `localhost:9292` in your browser
