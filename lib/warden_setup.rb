@@ -43,12 +43,10 @@ class MyApp < Sinatra::Base
     def authenticate!
       user = User.find_by(username: params['user']['username'])
 
-      if user.nil?
-        throw(:warden, message: 'The username you entered does not exist.')
-      elsif user.authenticate?(params['user']['password'])
+      if user && user.authenticate?(params['user']['password'])
         success!(user)
       else
-        throw(:warden, message: 'The username and password combination is incorrect.')
+        throw(:warden, message: 'Invalid username or password')
       end
     end
   end
