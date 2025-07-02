@@ -102,4 +102,50 @@ class HomepageTest < Test::Unit::TestCase
     follow_redirect!
     assert last_response.body.include?('Stop trying to hack')
   end
+
+  def test_rate_limiting_blocks_too_many_failed_attempts
+    # Clear any existing rate limit data
+    RateLimiter.clear_attempts('127.0.0.1')
+    
+    # Make 5 failed login attempts
+    5.times do
+      post '/auth/login', user: { username: 'User', password: 'WrongPassword' }
+      assert last_response.redirect?
+      follow_redirect!
+      assert last_response.body.include?('Invalid username or password')
+    end
+    
+    # 6th attempt should be rate limited
+    post '/auth/login', user: { username: 'User', password: 'WrongPassword' }
+    assert last_response.redirect?
+    follow_redirect!
+    assert last_response.body.include?('Too many failed attempts')
+  end
+
+  def test_successful_login_clears_rate_limit
+    # Clear any existing rate limit data
+    RateLimiter.clear_attempts('127.0.0.1')
+    
+    # Make 4 failed attempts (just under the limit)
+    4.times do
+      post '/auth/login', user: { username: 'User', password: 'WrongPassword' }
+      assert last_response.redirect?
+    end
+    
+    # Successful login should clear the attempts
+    post '/auth/login', user: { username: 'User', password: 'Secret' }
+    assert last_response.redirect?
+    follow_redirect!
+    assert last_response.ok?
+    
+    # Logout to clear session
+    get '/auth/logout'
+    
+    # Should be able to make failed attempts again (proving reset worked)
+    post '/auth/login', user: { username: 'User', password: 'WrongPassword' }
+    assert last_response.redirect?
+    follow_redirect!
+    assert last_response.body.include?('Invalid username or password')
+    refute last_response.body.include?('Too many failed attempts')
+  end
 end

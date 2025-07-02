@@ -41,11 +41,23 @@ class MyApp < Sinatra::Base
     end
 
     def authenticate!
+      client_ip = env['REMOTE_ADDR'] || env['HTTP_X_FORWARDED_FOR'] || 'unknown'
+      
+      # Check if IP is rate limited
+      if RateLimiter.too_many_attempts?(client_ip)
+        remaining_time = RateLimiter.time_until_reset(client_ip)
+        throw(:warden, message: "Too many failed attempts. Try again in #{remaining_time / 60} minutes.")
+      end
+
       user = User.find_by(username: params['user']['username'])
 
       if user && user.authenticate?(params['user']['password'])
+        # Clear failed attempts on successful login
+        RateLimiter.clear_attempts(client_ip)
         success!(user)
       else
+        # Record failed attempt
+        RateLimiter.record_attempt(client_ip)
         throw(:warden, message: 'Invalid username or password')
       end
     end
