@@ -21,6 +21,9 @@ require 'warden'
 
 require 'pry' unless ENV['APP_ENV'] == 'production'
 
+# Load SessionTimeout middleware
+require_relative 'lib/session_timeout'
+
 # modular Sinatra app inherit from Sinatra::Base
 class MyApp < Sinatra::Base
   # Boolean specifying whether the HTTP POST _method parameter
@@ -36,13 +39,16 @@ class MyApp < Sinatra::Base
   set :method_override, true
 
   # Configure secure sessions
-  use Rack::Session::Cookie, 
+  use Rack::Session::Cookie,
       key: 'sinatras_skeleton_session',
       expire_after: 2.hours.to_i,
       secret: ENV['SESSION_SECRET'] || SecureRandom.hex(64),
       secure: ENV['APP_ENV'] == 'production',
       httponly: true,
       same_site: :strict
+
+  # Add session timeout handling (1 hour of inactivity)
+  use SessionTimeout, 1.hour
 
   # flash messages are not integrated, yet
   # but loaded just in case someone finds the time

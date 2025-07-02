@@ -40,9 +40,9 @@ class MyApp < Sinatra::Base
       params['user'] && params['user']['username'] && params['user']['password']
     end
 
-    def authenticate!
+    def authenticate! # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
       client_ip = env['REMOTE_ADDR'] || env['HTTP_X_FORWARDED_FOR'] || 'unknown'
-      
+
       # Check if IP is rate limited
       if RateLimiter.too_many_attempts?(client_ip)
         remaining_time = RateLimiter.time_until_reset(client_ip)
@@ -51,7 +51,7 @@ class MyApp < Sinatra::Base
 
       user = User.find_by(username: params['user']['username'])
 
-      if user && user.authenticate?(params['user']['password'])
+      if user&.authenticate?(params['user']['password'])
         # Clear failed attempts on successful login
         RateLimiter.clear_attempts(client_ip)
         success!(user)
