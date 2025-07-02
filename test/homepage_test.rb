@@ -63,4 +63,30 @@ class HomepageTest < Test::Unit::TestCase
     get '/new_skeleton_form'
     assert last_response.body.include?('New Skeleton')
   end
+
+  def test_user_cannot_access_other_users_profile
+    post '/auth/login', user: { username: 'User', password: 'Secret' }
+    assert last_response.redirect?
+    follow_redirect!
+    assert last_response.ok?
+
+    # Try to access non-existent user
+    get '/users/2'
+    assert last_response.redirect?
+    follow_redirect!
+    assert last_response.body.include?('Stop trying to hack')
+  end
+
+  def test_user_cannot_access_not_existing_users_profile
+    post '/auth/login', user: { username: 'User', password: 'Secret' }
+    assert last_response.redirect?
+    follow_redirect!
+    assert last_response.ok?
+
+    # Try to access non-existent user
+    get '/users/999'
+    assert last_response.redirect?
+    follow_redirect!
+    assert last_response.body.include?('Access denied')
+  end
 end
