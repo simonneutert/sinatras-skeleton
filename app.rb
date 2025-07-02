@@ -7,6 +7,7 @@ require 'sass-embedded'
 
 require 'bcrypt'
 require 'ostruct'
+require 'securerandom'
 require 'sinatra'
 require 'sinatra/base'
 require 'sinatra/flash'
@@ -34,10 +35,14 @@ class MyApp < Sinatra::Base
 
   set :method_override, true
 
-  set :sessions, true
-
-  # session support for your app
-  use Rack::Session::Pool
+  # Configure secure sessions
+  use Rack::Session::Cookie, 
+      key: 'sinatras_skeleton_session',
+      expire_after: 2.hours.to_i,
+      secret: ENV['SESSION_SECRET'] || SecureRandom.hex(64),
+      secure: ENV['APP_ENV'] == 'production',
+      httponly: true,
+      same_site: :strict
 
   # flash messages are not integrated, yet
   # but loaded just in case someone finds the time

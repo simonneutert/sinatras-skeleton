@@ -148,4 +148,5 @@ class HomepageTest < Test::Unit::TestCase
     assert last_response.body.include?('Invalid username or password')
     refute last_response.body.include?('Too many failed attempts')
   end
+
 end
