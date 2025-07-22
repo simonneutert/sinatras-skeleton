@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.4.4'
+ruby '3.4.5'
 
 gem 'pg', '~> 1.5'
 gem 'puma'
