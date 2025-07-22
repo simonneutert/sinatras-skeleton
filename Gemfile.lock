@@ -68,7 +68,7 @@ GEM
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.6.1)
-    json (2.12.2)
+    json (2.13.0)
     kramdown (2.5.1)
       rexml (>= 3.3.9)
     kramdown-parser-gfm (1.1.0)
@@ -79,25 +79,25 @@ GEM
     method_source (1.1.0)
     mini_portile2 (2.8.9)
     minitest (5.25.5)
-    multi_json (1.15.0)
+    multi_json (1.17.0)
     mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.7.4)
-    nokogiri (1.18.8)
+    nokogiri (1.18.9)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.18.8-aarch64-linux-gnu)
+    nokogiri (1.18.9-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.8-arm-linux-gnu)
+    nokogiri (1.18.9-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.8-arm64-darwin)
+    nokogiri (1.18.9-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.8-x86_64-darwin)
+    nokogiri (1.18.9-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.8-x86_64-linux-gnu)
+    nokogiri (1.18.9-x86_64-linux-gnu)
       racc (~> 1.4)
     observer (0.1.2)
-    ostruct (0.6.2)
+    ostruct (0.6.3)
     parallel (1.27.0)
     parser (3.3.8.0)
       ast (~> 2.4.1)
@@ -131,7 +131,7 @@ GEM
     reverse_markdown (3.0.0)
       nokogiri
     rexml (3.4.1)
-    rubocop (1.77.0)
+    rubocop (1.78.0)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -142,7 +142,7 @@ GEM
       rubocop-ast (>= 1.45.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.45.1)
+    rubocop-ast (1.46.0)
       parser (>= 3.3.7.2)
       prism (~> 1.4)
     ruby-progressbar (1.13.0)
@@ -206,10 +206,10 @@ GEM
       logger
       rack (>= 2.2.4, < 4)
     temple (0.10.3)
-    test-unit (3.6.9)
+    test-unit (3.7.0)
       power_assert
     thor (1.4.0)
-    tilt (2.6.0)
+    tilt (2.6.1)
     timeout (0.4.3)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
@@ -268,7 +268,7 @@ DEPENDENCIES
   yui-compressor
 
 RUBY VERSION
-   ruby 3.4.4p34
+   ruby 3.4.5p51
 
 BUNDLED WITH
    2.6.9
