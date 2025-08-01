@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby '~> 3.4'
 
-gem 'pg', '~> 1.5'
+gem 'pg', '~> 1.6'
 gem 'puma'
 
 gem 'activerecord'
@@ -14,7 +14,7 @@ gem 'coffee-script'
 gem 'erubi', '~> 1.13'
 gem 'haml'
 gem 'ostruct', '~> 0.6.2'
-gem 'rack', '~> 3.1'
+gem 'rack', '~> 3.2'
 gem 'rackup', '~> 2.2'
 gem 'rake'
 gem 'sassc'
