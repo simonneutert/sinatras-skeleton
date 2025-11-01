@@ -61,7 +61,7 @@ GEM
     google-protobuf (4.33.0-x86_64-linux-gnu)
       bigdecimal
       rake (>= 13)
-    haml (6.3.0)
+    haml (7.0.1)
       temple (>= 0.8.2)
       thor
       tilt
