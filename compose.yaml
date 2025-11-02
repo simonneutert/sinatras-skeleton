@@ -1,0 +1,42 @@
+# Use postgres/example user/password credentials
+
+services:
+  web:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    env_file: ".env" # make sure to `cp .env.example .env` and set your desired values
+    ports:
+      - 3000:3000
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: postgres
+    # set shared memory limit when using docker compose
+    shm_size: 128mb
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    # or set shared memory limit when deploy via swarm stack
+    #volumes:
+    #  - type: tmpfs
+    #    target: /dev/shm
+    #    tmpfs:
+    #      size: 134217728 # 128*2^20 bytes = 128Mb
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+
+volumes:
+  postgres_data:
