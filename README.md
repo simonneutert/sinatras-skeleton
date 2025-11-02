@@ -64,6 +64,21 @@ You need **Ruby (>= 3.2)** and **Bundler** (of course).
 * edit titles in __views/layout.erb__ and __views/nav.erb__
 * check/set timezone __config/timezone.rb__
 
+#### podman/docker compose
+
+- `$ cp .env.example .env` then edit and adjust (set `DATABASE_HOST=db`)
+- `$ podman compose -f compose.yaml build`
+- `$ podman compose -f compose.yaml up -d db`
+- Wait a few seconds for the database to be ready
+- `$ podman compose -f compose.yaml run --rm web bundle exec rake db:setup`
+- `$ podman compose -f compose.yaml up`
+
+Visit localhost:3000 in your browser.
+
+The `web` service will automatically wait for the `db` service to be healthy before starting.
+
+**Adminer** (database management UI) is available at localhost:8080.
+
 ### now what?
 * read the credits
 * read the code

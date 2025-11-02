@@ -1,7 +1,7 @@
 # please set your database name (and settings)
 
 test:
-  host: localhost
+  host: <%= ENV.fetch('DATABASE_HOST', 'localhost') %>
   adapter: postgresql
   encoding: unicode
   database: sinatras-skeleton
@@ -10,7 +10,7 @@ test:
   pool: 5
 
 development:
-  host: localhost
+  host: <%= ENV.fetch('DATABASE_HOST', 'localhost') %>
   adapter: postgresql
   encoding: unicode
   database: sinatras-skeleton
@@ -19,7 +19,7 @@ development:
   pool: 5
 
 production:
-  host: localhost
+  host: <%= ENV.fetch('DATABASE_HOST', 'localhost') %>
   adapter: postgresql
   encoding: unicode
   database: sinatras-skeleton

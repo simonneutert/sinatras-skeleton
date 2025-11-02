@@ -9,7 +9,7 @@ require 'sinatra/base'
 require 'sinatra/activerecord'
 require 'sinatra/activerecord/rake'
 
-require 'pry' unless ENV['APP_ENV'] == 'production'
+require 'pry' unless ENV.fetch('APP_ENV', '').downcase == 'production'
 
 require_relative 'app'
 

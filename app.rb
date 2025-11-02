@@ -19,10 +19,11 @@ require 'sinatra/activerecord'
 require 'rack/protection'
 require 'warden'
 
-require 'pry' unless ENV['APP_ENV'] == 'production'
+require 'pry' unless ENV.fetch('APP_ENV', '').downcase == 'production'
 
 # Load SessionTimeout middleware
 require_relative 'lib/session_timeout'
+require_relative 'lib/secure_random_session_secret'
 
 # modular Sinatra app inherit from Sinatra::Base
 class MyApp < Sinatra::Base
@@ -42,8 +43,8 @@ class MyApp < Sinatra::Base
   use Rack::Session::Cookie,
       key: 'sinatras_skeleton_session',
       expire_after: 2.hours.to_i,
-      secret: ENV['SESSION_SECRET'] || SecureRandom.hex(64),
-      secure: ENV['APP_ENV'] == 'production',
+      secret: ENV.fetch('SESSION_SECRET', SecureRandomSessionSecret.generate).to_s,
+      secure: ENV.fetch('APP_ENV', '').downcase == 'production',
       httponly: true,
       same_site: :strict
 

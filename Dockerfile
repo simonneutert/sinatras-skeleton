@@ -1,4 +1,4 @@
-FROM ruby:3.3-slim
+FROM ruby:3.4-slim
 
 ENV RUBY_YJIT_ENABLE=1
 
@@ -9,13 +9,13 @@ RUN apt-get update -qq && \
         curl \
         libpq-dev
 
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+RUN curl -fsSL https://deb.nodesource.com/setup_24.x | bash - && \
     apt-get install -y nodejs
 
 WORKDIR /app
 
 COPY Gemfile Gemfile.lock /app/
-RUN bundle install
+RUN bundle install --jobs=4 --retry=3
 
 COPY . /app
 
