@@ -34,5 +34,5 @@ group :test, :development do
   gem 'rack-test', '~> 2.2'
   gem 'rubocop', require: false
   gem 'solargraph', require: false
-  gem 'test-unit', '~> 3.6', require: false
+  gem 'test-unit', '~> 3.7', require: false
 end
