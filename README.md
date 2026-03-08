@@ -7,9 +7,7 @@ Take this as a working example and as an inspiration. Pull Requests are welcome 
 ### Have you tried Roda?
 
 think sinatra is nice? Don't forget to [give Roda a chance](https://github.com/jeremyevans/roda-sequel-stack)!  
-browse through my repos 😉😇
-
----
+maybe you're interested in JRuby, too? [Joda](https://github.com/simonneutert/Joda) will help you get started 🙌
 
 ## What this Project aims to be
 
