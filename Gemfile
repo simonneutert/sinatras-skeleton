@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby '~> 3.4'
 
-gem 'pg', '~> 1.6'
+gem 'pg', '~> 1.7'
 gem 'puma'
 
 gem 'activerecord'
@@ -31,7 +31,7 @@ gem 'yui-compressor'
 
 group :test, :development do
   gem 'pry'
-  gem 'rack-test', '~> 2.2'
+  gem 'rack-test', '~> 2.3'
   gem 'rubocop', require: false
   gem 'solargraph', require: false
   gem 'test-unit', '~> 3.7', require: false
